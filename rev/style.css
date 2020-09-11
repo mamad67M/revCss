@@ -1,0 +1,59 @@
+
+body, html{
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+.header,.content,.sidebar,.footer{
+    padding:26px 34px;
+    color:white;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: #2b2024;
+}
+
+.content{
+    background-color: #fd0024;
+}
+.sidebar{
+    background-color: #a80038;
+    color: white;
+}
+.footer{
+    background-color: #2b2024;
+}
+
+.header{
+    flex-basis: 100%;
+}
+.sidebar{
+    flex-basis: 25%;
+}
+.content{
+    flex-basis: 50%;
+}
+.footer{
+    flex-basis: 100%;
+}
+
+@media screen and(max-width: 750px){
+    .content{
+        flex-basis: 100%;
+    }
+
+    .sidebar{
+        flex-basis: 50%;
+        order: 1;
+    }
+    .footer{
+        order: 2;
+    }
+}
